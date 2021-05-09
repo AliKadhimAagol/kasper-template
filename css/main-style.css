@@ -73,6 +73,11 @@ ul {
   color: #777;
   line-height: 1.8;
 }
+@media (max-width: 768px) {
+  .section-title p {
+    max-width: 75%;
+  }
+}
 /* End combonen */
 /* Start globale */
 .container {
@@ -522,6 +527,11 @@ ul {
   -ms-transform: translatey(-50%);
   -o-transform: translatey(-50%);
 }
+@media (max-width: 768px) {
+  .super-video .caption {
+    padding: 40px;
+  }
+}
 .super-video .caption h3 {
   font-weight: normal;
   text-transform: uppercase;
@@ -562,7 +572,7 @@ ul {
 }
 @media (max-width: 768px) {
   .status {
-    top: -80px;
+    top: -60px;
   }
 }
 .status::after {
@@ -589,6 +599,8 @@ ul {
   width: 100%;
   color: #fff;
   text-align: center;
+}
+.status .state:not(:last-child) {
   margin-bottom: var(--main-padding);
 }
 @media (min-width: 768px) {
@@ -620,6 +632,7 @@ ul {
 /* start information */
 .information {
   padding-bottom: var(--main-padding);
+  padding-top: var(--main-padding);
 }
 .information .container {
   display: flex;
@@ -649,6 +662,16 @@ ul {
 .information .testimonials .person {
   display: flex;
   margin-bottom: 40px;
+}
+@media (max-width:768px) {
+  .information .testimonials .person {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .information .testimonials .person .photo {
+    margin-bottom: 20px;
+  }
 }
 .information .testimonials .person .photo {
   margin-right: 40px;
@@ -749,3 +772,341 @@ ul {
   top: -14px;
 }
 /* End information */
+/* start quote */
+.quote {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  background-image: url(../images/quote.jpg);
+  background-size: cover;
+  position: relative;
+}
+.quote::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 70%);
+}
+.quote .container {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.quote .container {
+  text-align: center;
+}
+.quote p {
+  font-size: 30px;
+  position: relative;
+}
+.quote p::before {
+  content: "\f10d";
+  font-weight: 900;
+  font-family: "font awesome 5 free";
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+.quote p::after {
+  content: "\f10e";
+  font-weight: 900;
+  font-family: "font awesome 5 free";
+  position: absolute;
+  top: 40px;
+  right: center;
+}
+.quote h5 {
+  margin-top: 40px;
+  font-weight: normal;
+  font-size: 14px;
+}
+/* End quote */
+/* start pricing */
+.pricing {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+.pricing .offers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.pricing .offers .offer-type {
+  background-color: #fcfcfc;
+  text-align: center;
+}
+.pricing .offers .offer-type .price {
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  padding: 30px;
+}
+.pricing .offers .offer-type .price p {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.pricing .offers .offer-type .price h1 {
+  font-size: 60px;
+  position: relative;
+}
+.pricing .offers .offer-type .price h1::before {
+  content: "\f155";
+  font-family: "font awesome 5 free";
+  font-weight: 900;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 25px;
+  font-size: 30px;
+}
+.pricing .offers .offer-type .price h1::after {
+  content: "/MO";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: -20px;
+  right: 25px;
+  font-size: 20px;
+}
+.pricing .offers .offer-type .feat {
+  padding-top: 20px;
+  border-bottom: 1px solid var(--main-color);
+  margin-bottom: 20px;
+}
+.pricing .offers .offer-type .feat p {
+  padding: 20px;
+  width: 70%;
+  margin: 0 auto;
+}
+.pricing .offers .offer-type .feat p:not(:last-of-type) {
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .offers .offer-type .buy {
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+.pricing .offers .offer-type .buy a {
+  width: fit-content;
+  display: block;
+  border: 1px solid var(--main-color);
+  padding: 10px 20px;
+  text-transform: capitalize;
+  text-decoration: none;
+  margin: 0 auto;
+}
+.pricing .request {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+.pricing .request p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.pricing .request a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--main-color);
+  padding: 15px 20px;
+}
+/* End pricing */
+/* start subscribe */
+.subscribe {
+  background-image: url(../images/subscribe.jpg);
+  background-size: cover;
+  position: relative;
+  height: 250px;
+}
+.subscribe::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 50%);
+}
+.subscribe .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translatey(-50%);
+  -webkit-transform: translatey(-50%);
+  -moz-transform: translatey(-50%);
+  -ms-transform: translatey(-50%);
+  -o-transform: translatey(-50%);
+}
+@media (max-width: 768px) {
+  .subscribe .container {
+    flex-direction: column;
+  }
+}
+.subscribe form {
+  margin-right: 50px;
+  border: 1px solid #fff;
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .subscribe form {
+    margin: 20px;
+  }
+}
+.subscribe form i {
+  padding-left: 20px;
+}
+.subscribe form input[type="email"] {
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  padding-left: 10px;
+  position: relative;
+  outline: none;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .subscribe form input[type="email"] {
+    width: ;
+  }
+}
+.subscribe form input[type="email"]::placeholder,
+.subscribe form input[type="email"]:focus {
+  color: #fff;
+}
+.subscribe form input[type="button"] {
+  background-color: var(--main-color);
+  border: none;
+  padding: 20px 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.subscribe p {
+  color: #fff;
+  line-height: 1.8;
+}
+/* End subscribe */
+/* start contact */
+.contact {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+.contact .con-info {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 768px) {
+  .contact .con-info {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+.contact .con-info form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-items: flex-end;
+}
+@media (max-width: 768px) {
+  .contact .con-info form {
+    align-items: center;
+    width: 100%;
+  }
+}
+.contact .con-info form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.contact .con-info form textarea {
+  border: 1px solid #ccc;
+  padding: 20px;
+  height: 200px;
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+}
+.contact .con-info form input[type="button"] {
+  width: fit-content;
+  padding: 20px 30px;
+  background-color: var(--main-color);
+  color: #fff;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .con-info .info {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
+.con-info .info h3 {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.con-info .info p {
+  color: #777;
+  margin-bottom: 10px;
+}
+/* End contact */
+/* start footer */
+footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-image: url(../images/subscribe.jpg);
+  background-size: cover;
+  color: #fff;
+  position: relative;
+}
+footer::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 50%);
+}
+footer .container {
+  position: inherit;
+  text-align: center;
+}
+footer img {
+  margin-bottom: 60px;
+}
+footer h2 {
+  font-weight: normal;
+  padding: 20px;
+  border-bottom: 1px solid #fff;
+  width: fit-content;
+  margin: 0 auto 10px;
+}
+footer .social-links {
+  padding: 20px;
+  margin-bottom: 40px;
+}
+footer .social-links i {
+  margin-right: 10px;
+}
+footer p {
+  font: 20px;
+}
+footer p span {
+  color: var(--main-color);
+}
+/* End footer */
