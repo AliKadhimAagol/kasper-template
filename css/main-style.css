@@ -13,7 +13,9 @@
   padding: 0;
   margin: 0;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -336,6 +338,7 @@ ul {
   .services .servs .serv i {
     margin-right: 0;
     padding-bottom: 20px;
+    margin-top: 40px;
   }
 }
 .services .servs .serv .text h3 {
@@ -663,7 +666,7 @@ ul {
   display: flex;
   margin-bottom: 40px;
 }
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .information .testimonials .person {
     flex-direction: column;
     align-items: center;
@@ -957,6 +960,7 @@ ul {
   display: flex;
   align-items: center;
   color: #fff;
+  max-width: 100%;
 }
 @media (max-width: 768px) {
   .subscribe form {
@@ -974,11 +978,6 @@ ul {
   position: relative;
   outline: none;
   color: #fff;
-}
-@media (max-width: 768px) {
-  .subscribe form input[type="email"] {
-    width: ;
-  }
 }
 .subscribe form input[type="email"]::placeholder,
 .subscribe form input[type="email"]:focus {
@@ -1046,6 +1045,7 @@ ul {
   background-color: var(--main-color);
   color: #fff;
   text-transform: uppercase;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .con-info .info {
